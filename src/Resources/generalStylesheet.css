@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 6, 2020, 3:56:27 PM
+    Author     : Austin Wong
+*/
+
+/*
+#screen-title {
+    -fx-font: bold 14px "Tahoma";
+    -fx-fill: darkblue;
+}
+
+#table-title {
+    -fx-font: bold 14px "Tahoma";
+    -fx-fill: black;
+}
+
+.text-field {
+    -fx-font-style: italic;
+}
+
+.button {
+    -fx-min-width: 80px;
+}
+
+.scene {
+    -fx-background-color : gray;
+}
+*/
+
+.vbox{
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-style:solid;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: white;
+}
+
+.text-field, .label, .combo-box, .date-picker, .button, .table-view, .cell, .text-area{
+    -fx-font-family: Arial, Helvetica, sans-serif;
+}
+
+.border-pane{
+    -fx-background-color: #bad9f7;
+}

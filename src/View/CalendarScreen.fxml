@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="border-pane" stylesheets="@../Resources/generalStylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CalendarScreenController">
+   <center>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" spacing="20.0" styleClass="vbox" stylesheets="@../Resources/generalStylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="CALENDAR">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" maxWidth="850.0" prefHeight="50.0" prefWidth="850.0" spacing="10.0">
+               <children>
+                  <ComboBox fx:id="periodComboBox" onAction="#onActionFilterPeriod" prefHeight="25.0" prefWidth="98.0" promptText="MONTH" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="30.0" text="OF" />
+                  <DatePicker fx:id="datePicker" onAction="#onActionFilterPeriod" prefHeight="25.0" prefWidth="114.0" />
+                  <ComboBox fx:id="userComboBox" layoutX="359.0" layoutY="23.0" onAction="#onActionFilterUser" prefHeight="25.0" prefWidth="100.0" promptText="USER">
+                     <HBox.margin>
+                        <Insets left="175.0" right="3.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="500.0" prefWidth="1000.0" spacing="10.0">
+               <children>
+                  <ImageView fx:id="leftArrow" fitHeight="46.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/arrow.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <TableView fx:id="appointmentTableView" prefHeight="500.0" prefWidth="850.0">
+                    <columns>
+                        <TableColumn fx:id="dateCol" minWidth="120.0" prefWidth="141.0" text="Date" />
+                        <TableColumn fx:id="titleCol" minWidth="120.0" prefWidth="141.0" text="Appt" />
+                      <TableColumn fx:id="startCol" minWidth="120.0" prefWidth="141.0" text="Start" />
+                        <TableColumn fx:id="endCol" minWidth="120.0" prefWidth="141.0" text="End" />
+                        <TableColumn fx:id="customerCol" minWidth="120.0" prefWidth="141.0" text="Customer" />
+                        <TableColumn fx:id="typeCol" minWidth="120.0" prefWidth="141.0" text="Type" />
+                    </columns>
+                  </TableView>
+                  <ImageView fx:id="rightArrow" fitHeight="46.0" fitWidth="75.0" layoutX="10.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../Resources/arrow.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button fx:id="addBtn" minHeight="35.0" mnemonicParsing="false" onAction="#onActionAddAppointment" prefHeight="35.0" prefWidth="140.0" text="Add Appt" />
+                  <Button fx:id="updateBtn" layoutX="320.0" layoutY="10.0" minHeight="35.0" mnemonicParsing="false" onAction="#onActionUpdateAppointment" prefHeight="35.0" prefWidth="140.0" text="Update Appt" />
+                  <Button fx:id="deleteBtn" layoutX="440.0" layoutY="10.0" minHeight="35.0" mnemonicParsing="false" onAction="#onActionDeleteAppointment" prefHeight="35.0" prefWidth="140.0" text="Delete" />
+                  <Button fx:id="backBtn" minHeight="35.0" mnemonicParsing="false" onAction="#onActionReturn" prefHeight="35.0" prefWidth="140.0" text="Back">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

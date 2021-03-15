@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="500.0" minWidth="400.0" prefHeight="800.0" prefWidth="1000.0" styleClass="border-pane" stylesheets="@../Resources/generalStylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenuController">
+   <center>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" spacing="30.0" styleClass="vbox" stylesheets="@../Resources/generalStylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="MAIN MENU">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="customersBtn" mnemonicParsing="false" onAction="#onActionDisplayCustomers" prefWidth="200.0" text="Customers" />
+            <Button fx:id="appointmentsBtn" layoutX="184.0" layoutY="250.0" mnemonicParsing="false" onAction="#onActionDisplayAppointments" prefWidth="200.0" text="Appointments" />
+            <Button fx:id="reportsBtn" layoutX="110.0" layoutY="278.0" mnemonicParsing="false" onAction="#onActionDisplayReports" prefWidth="200.0" text="Reports" />
+            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#onActionLogout" prefWidth="200.0" text="Log Out" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

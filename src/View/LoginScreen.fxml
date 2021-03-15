@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="border-pane" stylesheets="@../Resources/generalStylesheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginScreenController">
+   <center>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" spacing="20.0" styleClass="vbox" stylesheets="@../Resources/generalStylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="titleLbl" text="LOGIN">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameTxt" maxWidth="200.0" onKeyPressed="#onKeyPressedLogin" promptText="Username">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordTxt" maxWidth="200.0" onKeyPressed="#onKeyPressedLogin" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </PasswordField>
+            <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#onActionLogin" prefWidth="60.0" text="Log In" />
+                  <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#onActionExit" prefWidth="60.0" text="Exit" />
+               </children>
+            </HBox>
+            <Label fx:id="errorLbl" prefHeight="34.0" prefWidth="200.0" textFill="RED" wrapText="true" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
